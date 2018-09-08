@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body class="bg-light">
+
+
+  <div class="jumbotron" id="loginSection" style="display:block;">
+    <div class="container">
+      <h2>Member Sign In</h2>
+      <br>
+      <div class="account-number">
+        <p> Enter Public Number
+          <input>
+        </p>
+      </div>
+      <div class="card-id">
+        <p> Enter Private Card ID
+          <input>
+        </p>
+      </div>
+      <button class="btn btn-primary sign-in-member">SIGN IN</button>
+    </div>
+  </div>
+
+
+  <div>
+
+
+
+
+
+  </div>
+
+  <div class="container text-center">
+    <br><br>
+    <div class="container text-center">
+      <div class="loader" id="loader" style="display:none;"></div>
+    </div>
+  </div>
+<!--Tabs-->
+
+
+<div class="tabs" id="transactionSection" style="display:none;">
+
+  <input type="radio" id="tab1" name="tab-control" checked>
+  <input type="radio" id="tab2" name="tab-control">
+  <input type="radio" id="tab3" name="tab-control">
+  <input type="radio" id="tab4" name="tab-control">
+  <ul class="Menu__tabs">
+    <li title="Features"><label for="tab1" role="button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="pinpointstar" x="0px" y="0px" viewBox="0 0 200 224" enable-background="new 0 0 200 224" xml:space="preserve" width="50" height="50"><g><path fill="#FFFFFF" d="M91.748,24c-28.6719,0-52,23.3281-52,52s23.3281,52,52,52s52-23.3281,52-52S120.4199,24,91.748,24z M121.1699,66.2109l-11.8086,11.5117l2.7852,16.2539c0.2578,1.5-0.3594,3.0156-1.5898,3.9102 c-0.6992,0.5078-1.5234,0.7656-2.3516,0.7656c-0.6367,0-1.2773-0.1523-1.8633-0.4609L91.748,90.5195l-14.5938,7.6719 c-1.3438,0.7148-2.9766,0.5938-4.2148-0.3047c-1.2305-0.8945-1.8477-2.4102-1.5898-3.9102l2.7852-16.2539L62.3262,66.2109 c-1.0898-1.0625-1.4805-2.6523-1.0117-4.0977c0.4727-1.4492,1.7227-2.5039,3.2305-2.7227l16.3164-2.375l7.3008-14.7852 c1.3438-2.7344,5.8281-2.7344,7.1719,0l7.3008,14.7852l16.3164,2.375c1.5078,0.2188,2.7578,1.2734,3.2305,2.7227 C122.6504,63.5586,122.2598,65.1484,121.1699,66.2109z"></path><path fill="#D0E8FF" d="M96.3926,62.4414l-4.6445-9.4062l-4.6445,9.4062c-0.582,1.1797-1.707,2-3.0117,2.1875l-10.3789,1.5117 l7.5117,7.3242c0.9414,0.918,1.3711,2.2422,1.1484,3.5391l-1.7695,10.3359l9.2812-4.8789C90.4707,82.1523,91.1074,82,91.748,82 s1.2773,0.1523,1.8633,0.4609l9.2812,4.8789l-1.7695-10.3359c-0.2227-1.2969,0.207-2.6211,1.1484-3.5391l7.5117-7.3242 l-10.3789-1.5117C98.0996,64.4414,96.9746,63.6211,96.3926,62.4414z"></path><path fill="#5CB0FF" d="M91.748,8c-37.4961,0-68,30.5039-68,68c0,40.0156,51.9219,140,68,140s68-99.9844,68-140 C159.748,38.5039,129.2441,8,91.748,8z M91.748,136c-33.0859,0-60-26.9141-60-60s26.9141-60,60-60s60,26.9141,60,60 S124.834,136,91.748,136z"></path><path fill="#1C71DA" d="M91.748,0c-41.9062,0-76,34.0938-76,76c0,38.9961,52.0742,148,76,148s76-109.0039,76-148 C167.748,34.0938,133.6543,0,91.748,0z M91.748,216c-16.0781,0-68-99.9844-68-140c0-37.4961,30.5039-68,68-68s68,30.5039,68,68 C159.748,116.0156,107.8262,216,91.748,216z"></path><path fill="#1C71DA" d="M91.748,16c-33.0859,0-60,26.9141-60,60s26.9141,60,60,60s60-26.9141,60-60S124.834,16,91.748,16z M91.748,128c-28.6719,0-52-23.3281-52-52s23.3281-52,52-52s52,23.3281,52,52S120.4199,128,91.748,128z"></path><path fill="#1C71DA" d="M118.9512,59.3906l-16.3164-2.375L95.334,42.2305c-1.3438-2.7344-5.8281-2.7344-7.1719,0l-7.3008,14.7852 l-16.3164,2.375c-1.5078,0.2188-2.7578,1.2734-3.2305,2.7227c-0.4688,1.4453-0.0781,3.0352,1.0117,4.0977l11.8086,11.5117 l-2.7852,16.2539c-0.2578,1.5,0.3594,3.0156,1.5898,3.9102c1.2383,0.8984,2.8711,1.0195,4.2148,0.3047l14.5938-7.6719 l14.5938,7.6719c0.5859,0.3086,1.2266,0.4609,1.8633,0.4609c0.8281,0,1.6523-0.2578,2.3516-0.7656 c1.2305-0.8945,1.8477-2.4102,1.5898-3.9102l-2.7852-16.2539l11.8086-11.5117c1.0898-1.0625,1.4805-2.6523,1.0117-4.0977 C121.709,60.6641,120.459,59.6094,118.9512,59.3906z M102.2715,73.4648c-0.9414,0.918-1.3711,2.2422-1.1484,3.5391l1.7695,10.3359 l-9.2812-4.8789C93.0254,82.1523,92.3887,82,91.748,82s-1.2773,0.1523-1.8633,0.4609l-9.2812,4.8789l1.7695-10.3359 c0.2227-1.2969-0.207-2.6211-1.1484-3.5391l-7.5117-7.3242l10.3789-1.5117c1.3047-0.1875,2.4297-1.0078,3.0117-2.1875 l4.6445-9.4062l4.6445,9.4062c0.582,1.1797,1.707,2,3.0117,2.1875l10.3789,1.5117L102.2715,73.4648z"></path></g><path fill="#FF5D5D" d="M180,203.8223c-1.0234,0-2.0479-0.3906-2.8281-1.1719c-1.5625-1.5615-1.5625-4.0947,0-5.6562 l14.1426-14.1416c1.5625-1.5625,4.0957-1.5625,5.6562,0c1.5625,1.5615,1.5625,4.0947,0,5.6562l-14.1426,14.1416 C182.0469,203.4316,181.0234,203.8223,180,203.8223z"></path><path fill="#FF5D5D" d="M194.1426,203.8223c-1.0234,0-2.0469-0.3906-2.8281-1.1719l-14.1426-14.1416 c-1.5625-1.5615-1.5625-4.0947,0-5.6562c1.5605-1.5625,4.0938-1.5625,5.6562,0l14.1426,14.1416 c1.5625,1.5615,1.5625,4.0947,0,5.6562C196.1904,203.4316,195.166,203.8223,194.1426,203.8223z"></path><path fill="#00D40B" d="M186,39.8223c-7.7197,0-14-6.2803-14-14s6.2803-14,14-14s14,6.2803,14,14S193.7197,39.8223,186,39.8223z M186,19.8223c-3.3086,0-6,2.6914-6,6s2.6914,6,6,6s6-2.6914,6-6S189.3086,19.8223,186,19.8223z"></path><path fill="#FFC504" d="M15.3145,202.4492c-1.0234,0-2.0469-0.3906-2.8281-1.1719L1.1719,189.9639 C0.4219,189.2139,0,188.1963,0,187.1357s0.4219-2.0781,1.1719-2.8281l11.3145-11.3135c1.5625-1.5625,4.0938-1.5625,5.6562,0 l11.3135,11.3135c1.5625,1.5615,1.5625,4.0947,0,5.6562l-11.3135,11.3135C17.3623,202.0586,16.3379,202.4492,15.3145,202.4492z M9.6572,187.1357l5.6572,5.6572l5.6562-5.6572l-5.6562-5.6572L9.6572,187.1357z"></path></svg>
+      <br><span>Features</span></label></li>
+    <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+</svg><br><span>Features</span></label></li>
+    <li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
+    <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+</svg><br><span>Features</span></label></li>    <li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
+    <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+</svg><br><span>Features</span></label></li>
+  </ul>
+
+  <div class="slider"><div class="indicator"></div></div>
+  <div class="content">
+    <section><!--Seccion 1-->
+
+    <div id="headSection" style="display:block;">
+      <div class="container">
+
+        <table>
+          <tr>
+            <td>
+              <div class="heading"> </div>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    
+
+      <div class="card">
+       <div class="content">
+        <div class="background" style="background-image: url(bitcoin.JPG);">
+        </div>
+        <h1 class="title" style="border: none;">Obtener<br/> creditos de<br/> API</h1>
+      </div>
+      </div>
+
+    <div class="container" id="infoSection">
+      <div class="row">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="earn" role="tabpanel" aria-labelledby="earn-tab">
+            <div class="earnPartnerId">
+              <p> <b>Elegir Proveedor </b></p>
+              <div class="earn-partner">
+                <p>
+                  <select class="form-control">
+                                        <option disabled="" selected="" value="disabled">Loading...</option>
+                                    </select>
+                </p>
+              </div>
+            </div>
+
+     
+            <p><b> Obtener creditos de API de terceros </b><br />
+          
+
+            <div class="earnPoints">
+              <p> Obtener
+                <input>
+              </p>
+            </div>
+
+            <button class="btn btn-secondary earn-points-transaction">GET</button>
+            <hr class="featurette-divider">
+
+          </div>
+
+          <div class="tab-pane fade" id="redeem" role="tabpanel" aria-labelledby="redeem-tab">
+            <br>
+          
+
+          </div>
+
+          <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transactions-tab">
+         
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    </section>
+    <section><!--Seccion 2-->
+      <p class="date">Sunday, 10. September</p>
+      <h1 class="headline">Utilizar creditos</h1>
+            <br>
+            <div class="usePartnerId">
+              <p> <b>Elige Provedor </b></p>
+              <div class="use-partner">
+                <p>
+                  <select class="form-control">
+                                            <option disabled="" selected="" value="disabled">Loading...</option>
+                                        </select>
+                </p>
+              </div>
+            </div>
+
+                  <p><b> Utliar Creditos en transaccion </b>
+              <p>
+
+                <div class="usePoints">
+                  <p> creditos
+                    <input>
+                  </p>
+                </div>
+
+                <button class="btn btn-secondary use-points-transaction">GO</button>
+
+                <hr class="featurette-divider">
+    </section>
+    <section><!--Seccion 3-->
+      <p class="date">Sunday, 10. September</p>
+      <h1 class="headline">Balance</h1>
+       <div class="points-allocated-transactions" style="overflow-y: hidden;"> </div>
+    </section>
+    <section><!--Seccion 4-->
+      <p class="date">Sunday, 10. September</p>
+      <h1 class="headline">Pagos</h1>
+      <div class="points-redeemed-transactions" style="overflow-y: hidden;"> </div>
+    </section>
+  </div>
+
+</div><!--End Tabs-->
+</body>
+
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="/scripts/member.js"></script>

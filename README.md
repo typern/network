@@ -97,8 +97,8 @@ This project is open-source and licensed under the MIT License.
 ---  
 
 ## Acknowledgments  
-This project was created for **HackMX2020**, an innovation hackathon organized by the Universidad Autónoma de México. It earned:  
+This project was created for **HackMX2018**, an innovation hackathon organized by the Universidad Autónoma de México. It earned:  
 - **1st Place in its Category**  
 - **3rd Place Globally**  
 
-We thank the HackMX2020 organizers and IBM for providing the necessary resources and support.  
+We thank the HackMX2018 organizers and IBM for providing the necessary resources and support.  

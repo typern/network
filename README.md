@@ -4,7 +4,7 @@ This project implements a decentralized database using IBM Blockchain Technology
 
 **🏆 Awards**  
 - **1st Place (Category)**: IBM Blockchain Technology
-- **3rd Place (Global)**: HackMX2020, organized by the Universidad Nacional Autónoma de México.
+- **3rd Place (Global)**: HackMX2018, organized by the Universidad Nacional Autónoma de México.
 
 ---
 
